@@ -128,7 +128,7 @@ public class Kltn implements IFloodlightModule, IOFMessageListener {
 		System.out.println("+++++++++++++++Hello+++++++++++++++++++++++++");
 		floodlightProvider.addOFMessageListener(OFType.PACKET_IN, this);
 		
-		// Khoi tao gia tri thread, sau khi khoi dong controll thi 5s sau thread moi chay, sau do 16s se chay 1 lan
+		// Khoi tao gia tri thread, sau khi khoi dong controller thi 5s sau thread moi chay, sau do 16s se chay 1 lan
 		eliPortFromController = threadPoolService.getScheduledExecutor().scheduleAtFixedRate(new EliPortFromController(), 5, 16, TimeUnit.SECONDS);
 	}
 	
